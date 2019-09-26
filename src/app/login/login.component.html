@@ -1,0 +1,52 @@
+<h1 style="color: blue">Login/Sign-Up</h1>
+
+<div *ngIf="page=='home'; then empty else noempty"></div>
+
+<ng-template #empty>
+        <button (click)="showLogin()" class="btn btn-success">Login</button>
+        <button (click)="showSignup()" class="btn btn-success">Sign-Up</button>
+</ng-template>
+
+<ng-template #noempty>
+
+    <button (click)="showLogin()" class="btn btn-success">Login</button>
+    <button (click)="showSignup()" class="btn btn-success">Sign-Up</button>
+    
+<div *ngIf="page=='login'; then show else noshow"></div>
+
+
+<ng-template #show>
+        <h3 style="color: red">Login</h3>
+        <form>
+               <h3> Username:<br>
+                <input type="text" name="username" placeholder="Enter the username"></h3>
+                <br>
+               <h3> Password:<br>
+                <input type="password" name="pass" placeholder="Enter the password"></h3>
+                <br>
+                
+                <button class="btn btn-success">Submit</button>
+        </form>
+</ng-template>
+
+<ng-template #noshow>
+        <h3 style="color:red">Sign-Up</h3>
+        <form>
+           <h3> Name:
+            <input type="text" name="name" placeholder="Enter your name"></h3>
+            <br>
+           <h3> Email:
+            <input type="text" name="email" placeholder="Enter your email"></h3>
+            <br>
+           <h3> Username:
+            <input type="text" name="username" placeholder="Enter the username"></h3>
+            <br>
+           <h3> password:
+            <input type="password" name="pass" placeholder="Enter the password"></h3>
+            <br>
+            <button class="btn btn-success">Submit</button>
+        </form>
+</ng-template>
+</ng-template>
+
+
